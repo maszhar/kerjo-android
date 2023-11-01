@@ -43,13 +43,24 @@
             app:layout_constraintTop_toBottomOf="@id/jobNameText"
             tools:text="02 Agustus 2023" />
 
+        <TextView
+            android:id="@+id/tasksLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/tasks"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/jobDeadlineText" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/taskList"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="4dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/jobDeadlineText" />
+            app:layout_constraintTop_toBottomOf="@id/tasksLabel"
+            tools:listitem="@layout/item_task" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
